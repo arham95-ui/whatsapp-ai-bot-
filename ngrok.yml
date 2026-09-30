@@ -1,0 +1,15 @@
+version: "3"
+agent:
+    authtoken: 3JbROxXa5lbZ5pSrkbKRgascEew_2Cz6KYkg6gkE1x4xh69tz
+    
+tunnels:
+    whatsapp:
+        proto: http
+        addr: 8000
+        traffic_policy:
+            on_http_request:
+                - actions:
+                    - type: add-headers
+                      config:
+                          headers:
+                              ngrok-skip-browser-warning: "true"

@@ -1,0 +1,26 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+class Settings:
+    WHATSAPP_TOKEN: str = os.getenv("WHATSAPP_TOKEN", "")
+    PHONE_NUMBER_ID: str = os.getenv("PHONE_NUMBER_ID", "")
+    VERIFY_TOKEN: str = os.getenv("VERIFY_TOKEN", "verify_me")
+    GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
+    WHATSAPP_API_URL = "https://graph.facebook.com/v18.0"
+
+settings = Settings()import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+class Settings:
+    WHATSAPP_TOKEN: str = os.getenv("WHATSAPP_TOKEN", "")
+    PHONE_NUMBER_ID: \str = os.getenv("PHONE_NUMBER_ID", "")
+    VERIFY_TOKEN: str = os.getenv("VERIFY_TOKEN", "verify_me")
+    OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
+    REDIS_URL: str = os.getenv("REDIS_URL", "redis://localhost:6379")
+    WHATSAPP_API_URL = "https://graph.facebook.com/v18.0"
+
+settings = Settings()
